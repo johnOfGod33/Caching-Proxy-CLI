@@ -1,0 +1,19 @@
+{
+  "name": "caching_proxy_cli",
+  "version": "1.0.0",
+  "description": "server which intercept request, and save response in cache ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnOfGod33/Caching-Proxy-CLI"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnOfGod33/Caching-Proxy/issues"
+  },
+  "homepage": "https://github.com/johnOfGod33/Caching-Proxy#readme"
+}
