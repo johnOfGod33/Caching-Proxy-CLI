@@ -8,8 +8,8 @@ const startServer = (port = 4040, origin = "http://localhost:3000") => {
   app.use(cors());
   app.use(express.json());
 
-  app.get(getDataByCache(origin));
-  app.get(proxyRequest(origin));
+  app.use(getDataByCache(origin));
+  app.use(proxyRequest(origin));
 
   app.listen(port, () => {
     console.log(`server runing at port ${port} and have origin : ${origin}`);
