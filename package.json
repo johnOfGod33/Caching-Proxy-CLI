@@ -2,12 +2,12 @@
   "name": "caching_proxy_cli",
   "version": "1.0.0",
   "description": "server which intercept request, and save response in cache ",
-  "main": "index.js",
+  "main": "cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "caching-proxy": "index.js"
+    "caching-proxy": "cli.js"
   },
   "repository": {
     "type": "git",
