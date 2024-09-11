@@ -5,7 +5,7 @@ const proxyRequest = (origin) => {
   return async (req, res) => {
     const requestConfig = getRequestConfig(req, origin);
 
-    console.log(requestConfig);
+    console.info(`request to ${requestConfig.url}`);
 
     try {
       const cache = new Cache();

@@ -8,10 +8,12 @@ const getDataByCache = (origin) => {
       const data = await cache.getCache(req.url);
 
       if (data) {
-        res.set("X-CACHE", "HIT");
+        console.info("X-Cache: HIT");
+        res.set("X-Cache", "HIT");
         res.status(200).json(data);
       } else {
-        res.set("X-CACHE", "MISS");
+        console.info("X-Cache: MISS");
+        res.set("X-Cache", "MISS");
         next();
       }
     } catch (err) {
