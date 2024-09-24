@@ -1,7 +1,8 @@
-const Cache = require("../configs/redisCache");
+import Cache from "../configs/redisCache";
+import { Request, Response, NextFunction } from "express";
 
-const getDataByCache = (origin) => {
-  return async (req, res, next) => {
+const getDataByCache = () => {
+  return async (req: Request, res: Response, next: NextFunction) => {
     const cache = new Cache();
 
     try {
@@ -16,11 +17,11 @@ const getDataByCache = (origin) => {
         res.set("X-Cache", "MISS");
         next();
       }
-    } catch (err) {
+    } catch {
       console.log("can't access to the cache");
       next();
     }
   };
 };
 
-module.exports = getDataByCache;
+export default getDataByCache;

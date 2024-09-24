@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const startServer = require("./src/server");
-const clearCache = require("./src/clearCache");
-const yargs = require("yargs/yargs");
-const { hideBin } = require("yargs/helpers");
+import startServer from "./server";
+import clearCache from "./clearCache";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
 yargs(hideBin(process.argv))
   .command(
