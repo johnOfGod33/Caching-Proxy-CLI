@@ -1,7 +1,7 @@
 import Cache from "../configs/redisCache";
 import { Request, Response, NextFunction } from "express";
 
-const getDataByCache = (origin: string) => {
+const getDataByCache = () => {
   return async (req: Request, res: Response, next: NextFunction) => {
     const cache = new Cache();
 
@@ -17,7 +17,7 @@ const getDataByCache = (origin: string) => {
         res.set("X-Cache", "MISS");
         next();
       }
-    } catch (err) {
+    } catch {
       console.log("can't access to the cache");
       next();
     }

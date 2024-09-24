@@ -1,9 +1,9 @@
 import { Request } from "express";
 
 const getRequestConfig = (req: Request, origin: string) => {
-  let requestUrl = `${origin}${req.url}`;
+  const requestUrl = `${origin}${req.url}`;
 
-  let requestConfig = {
+  const requestConfig = {
     method: "get",
     url: requestUrl,
     headers: req.headers,
