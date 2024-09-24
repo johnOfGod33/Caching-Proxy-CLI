@@ -1,9 +1,10 @@
+import express from "express";
+import proxyRequest from "./middleware/proxyRequest";
+import getDataByCache from "./middleware/getDataByCache";
+
 const startServer = (port = 4040, origin = "http://localhost:3000") => {
-  const express = require("express");
-  const cors = require("cors");
-  const getDataByCache = require("./middleware/getDataByCache");
-  const proxyRequest = require("./middleware/proxyRequest");
   const app = express();
+  const cors = require("cors");
 
   app.use(cors());
   app.use(express.json());
@@ -16,4 +17,4 @@ const startServer = (port = 4040, origin = "http://localhost:3000") => {
   });
 };
 
-module.exports = startServer;
+export default startServer;

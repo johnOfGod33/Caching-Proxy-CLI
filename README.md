@@ -25,6 +25,8 @@ git clone https://github.com/johnOfGod33/Caching-Proxy-CLI.git
 
 cd Caching-Proxy-CLI
 
+npm run build
+
 npm install -g
 ```
 

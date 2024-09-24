@@ -1,8 +1,10 @@
-const axios = require("axios");
-const getRequestConfig = require("../configs/getRequestConfig");
-const Cache = require("../configs/redisCache");
-const proxyRequest = (origin) => {
-  return async (req, res) => {
+import axios from "axios";
+import getRequestConfig from "../configs/getRequestConfig";
+import Cache from "../configs/redisCache";
+import { Request, Response } from "express";
+
+const proxyRequest = (origin: string) => {
+  return async (req: Request, res: Response) => {
     const requestConfig = getRequestConfig(req, origin);
 
     console.info(`request to ${requestConfig.url}`);
@@ -21,4 +23,4 @@ const proxyRequest = (origin) => {
   };
 };
 
-module.exports = proxyRequest;
+export default proxyRequest;

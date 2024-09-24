@@ -1,4 +1,6 @@
-const getRequestConfig = (req, origin) => {
+import { Request } from "express";
+
+const getRequestConfig = (req: Request, origin: string) => {
   let requestUrl = `${origin}${req.url}`;
 
   let requestConfig = {
@@ -10,4 +12,4 @@ const getRequestConfig = (req, origin) => {
   return requestConfig;
 };
 
-module.exports = getRequestConfig;
+export default getRequestConfig;
