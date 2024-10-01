@@ -2,8 +2,17 @@
 
 import startServer from "./server";
 import clearCache from "./clearCache";
+import figlet from "figlet";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
+
+console.log(
+  figlet.textSync("caching proxy server", {
+    font: "Slant", // Change the font to "Slant"
+    horizontalLayout: "full",
+    verticalLayout: "default",
+  })
+);
 
 yargs(hideBin(process.argv))
   .command(

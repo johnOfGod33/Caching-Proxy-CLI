@@ -2,6 +2,8 @@
 
 A server that sits between clients and a target server to intercept and cache responses with CLI tool
 
+![alt text](asset/cli%20example.png)
+
 ## HOW IT WORKS
 
 When a client requests data, the proxy checks if the data is already stored (cached). If so, it serves the cached version instead of querying the target server, reducing load times and server requests
